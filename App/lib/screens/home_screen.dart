@@ -64,9 +64,30 @@ class _HomeScreenState extends State<HomeScreen> {
                     )
                   ],
                 ),
+              ),
+              const Gap(40),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Upcoming Flights',
+                    style: Styles.headlineStyle2,
+                  ),
+                  InkWell(
+                    onTap: () {
+                      print("working");
+                    },
+                    child: Text(
+                      "View All",
+                      style:
+                          Styles.textStyle.copyWith(color: Styles.primaryColor),
+                    ),
+                  )
+                ],
               )
             ]),
           )
+        
         ],
       ),
     );
