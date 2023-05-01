@@ -1,6 +1,7 @@
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:project_name/screens/ticket_view.dart';
 import '/utils/app_style.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -86,8 +87,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 ],
               )
             ]),
-          )
-        
+          ),
+          const TicketView(),
         ],
       ),
     );
