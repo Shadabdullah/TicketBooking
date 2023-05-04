@@ -13,11 +13,11 @@ class TicketView extends StatelessWidget {
       width: size.width,
       height: 200,
       child: Container(
-        margin: EdgeInsets.only(left: 16),
+        margin: const EdgeInsets.only(left: 16),
         child: Column(children: [
           Container(
             decoration: const BoxDecoration(
-                color: Color(0xFFF526799),
+                color: Color(0XFFF526799),
                 borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(16),
                     topRight: Radius.circular(16))),
@@ -81,3 +81,6 @@ class TicketView extends StatelessWidget {
     );
   }
 }
+
+
+//2h 8 m
