@@ -67,7 +67,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ],
                 ),
               ),
-              const Gap(40),
+              const Gap(30),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -89,7 +89,7 @@ class _HomeScreenState extends State<HomeScreen> {
               )
             ]),
           ),
-          const Gap(10),
+          const Gap(20),
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             padding: const EdgeInsets.only(left: 20),
