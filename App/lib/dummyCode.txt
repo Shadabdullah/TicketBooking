@@ -1,0 +1,13 @@
+Flex(
+                                  direction: Axis.horizontal,
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  mainAxisSize: MainAxisSize.max,
+                                  children: List.generate(
+                      5,
+                      (index) => SizedBox(
+                            width: 5,
+                            height: 1,
+                            child: DecoratedBox(
+                                decoration: BoxDecoration(color: Colors.white)),
+                          )),
+                                ),
