@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 import 'package:project_name/screens/app_layout.dart';
 import 'package:project_name/utils/app_style.dart';
 import 'package:project_name/widgets/thick_container.dart';
@@ -17,7 +18,8 @@ class TicketView extends StatelessWidget {
         child: Column(children: [
           Container(
             decoration: const BoxDecoration(
-                color: Color(0XFFF526799),
+                // ignore: use_full_hex_values_for_flutter_colors
+                color: Color(0xfff526799),
                 borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(16),
                     topRight: Radius.circular(16))),
@@ -69,8 +71,35 @@ class TicketView extends StatelessWidget {
                   const ThickContainer(),
                   const Spacer(),
                   Text(
-                    "London",
+                    "LDN",
                     style: Styles.headlineStyle3.copyWith(color: Colors.white),
+                  )
+                ],
+              ),
+              const Gap(1),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  SizedBox(
+                    width: 100,
+                    child: Text(
+                      "New-York",
+                      style:
+                          Styles.headlineStyle4.copyWith(color: Colors.white),
+                    ),
+                  ),
+                  Text(
+                    "8H 30 M",
+                    style: Styles.headlineStyle4.copyWith(color: Colors.white),
+                  ),
+                  SizedBox(
+                    width: 100,
+                    child: Text(
+                      "London",
+                      style:
+                          Styles.headlineStyle4.copyWith(color: Colors.white),
+                      textAlign: TextAlign.end,
+                    ),
                   )
                 ],
               )
