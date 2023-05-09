@@ -1,7 +1,9 @@
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:project_name/screens/hotels_screen.dart';
 import 'package:project_name/screens/ticket_view.dart';
+import 'package:project_name/utils/app_infolist.dart';
 import '/utils/app_style.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -76,9 +78,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     style: Styles.headlineStyle2,
                   ),
                   InkWell(
-                    onTap: () {
-                      print("working");
-                    },
+                    onTap: () {},
                     child: Text(
                       "View All",
                       style:
@@ -94,6 +94,32 @@ class _HomeScreenState extends State<HomeScreen> {
             scrollDirection: Axis.horizontal,
             padding: const EdgeInsets.only(left: 20),
             child: Row(children: [TicketView(), TicketView(), TicketView()]),
+          ),
+          const Gap(20),
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  'Hotels',
+                  style: Styles.headlineStyle2,
+                ),
+                InkWell(
+                  onTap: () {},
+                  child: Text(
+                    "View All",
+                    style:
+                        Styles.textStyle.copyWith(color: Styles.primaryColor),
+                  ),
+                )
+              ],
+            ),
+          ),
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            padding: const EdgeInsets.only(left: 20),
+            child: Row(children: [const HotelScreeen()]),
           )
         ],
       ),
