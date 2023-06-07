@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:project_name/screens/app_layout.dart';
+import 'package:project_name/utils/app_layout.dart';
 import 'package:project_name/utils/app_style.dart';
 
 class HotelScreeen extends StatelessWidget {
-  const HotelScreeen({super.key});
+  final Map<String, dynamic> hotel;
+
+  const HotelScreeen({super.key, required this.hotel});
 
   @override
   Widget build(BuildContext context) {
@@ -25,27 +27,27 @@ class HotelScreeen extends StatelessWidget {
               boxShadow: const [
                 BoxShadow(color: Colors.grey, blurRadius: 2, spreadRadius: 1)
               ],
-              image: const DecorationImage(
+              image: DecorationImage(
                   fit: BoxFit.cover,
-                  image: AssetImage('assets/images/one.png'))),
+                  image: AssetImage('assets/images/${hotel['image']}'))),
         ),
         const Gap(10),
         Text(
-          "Open space",
+          hotel['place'],
           style: Styles.headlineStyle2
-              .copyWith(color: Color.fromARGB(255, 237, 227, 197)),
+              .copyWith(color: const Color.fromARGB(255, 237, 227, 197)),
         ),
         const Gap(10),
         Text(
-          "London",
+          hotel['Destination'],
           style: Styles.headlineStyle2
-              .copyWith(color: Color.fromARGB(255, 237, 227, 197)),
+              .copyWith(color: const Color.fromARGB(255, 237, 227, 197)),
         ),
         const Gap(10),
         Text(
-          "\$40/Night",
+          '\$ ${hotel['price']}/night',
           style: Styles.headlineStyle2
-              .copyWith(color: Color.fromARGB(255, 237, 227, 197)),
+              .copyWith(color: const Color.fromARGB(255, 237, 227, 197)),
         )
       ]),
     );
